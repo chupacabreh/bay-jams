@@ -66,13 +66,18 @@
  };
 
  var findParentByClassName = function(element, targetClass) {
+   console.log(targetClass)
      if (element) {
          var currentParent = element.parentElement;
          while (currentParent.className !== targetClass && currentParent.className !== null) {
             currentParent = currentParent.parentElement;
          }
          return currentParent;
-     }
+      } else if (element.parentElement === undefined) {
+        console.log("No parent found");
+      } else if (element.parentElement.className === targetClass) {
+        console.log("No parent found with that class name");
+      }
  };
 
  var getSongItem = function(element) {
@@ -132,7 +137,7 @@
 
      songListContainer.addEventListener('mouseover', function(event) {
         // #1
-        console.log(event.target);
+        // console.log(event.target);
         // Only target individual song rows during event delegation
         if (event.target.parentElement.className === 'album-view-song-item') {
             var songItem = getSongItem(event.target);
