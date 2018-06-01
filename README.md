@@ -1,6 +1,6 @@
 <h1>Bloc Jams</h1>
 
-My first project with Bloc where I created a fully functional music player with JavaScript and Jquery.
+My first project with Bloc where I created a fully functional music player with JavaScript and Jquery and Buzz music library.
 
 
 
